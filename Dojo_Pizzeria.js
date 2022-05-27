@@ -69,7 +69,13 @@ function randomPizza() {
     pizza.sauceType = randomPick(sauceTypes);
     pizza.cheeses = [];
     pizza.toppings = [];
-    for(var i = 0; i<randomRange(5, 1); i++) {
+    for(var i = 0; i<randomRange(5, 2); i++) {
         pizza.cheeses.push(randomPick(cheeses));
     }
+    for(var i = 0; i<randomRange(4, 1); i++) {
+        pizza.toppings.push(randomPick(toppings));
+    }
+    return pizza;
 }
+
+console.log(randomPizza());
